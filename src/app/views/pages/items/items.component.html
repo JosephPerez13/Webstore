@@ -1,0 +1,7 @@
+<div class="container-fluid">
+    <div class="row">
+        <app-card class="col-4" *ngFor="let product of products" [pPic]=product.pPic [pName]=product.pName
+            [pDescription]=product.pDescription [pPrice]=product.pPrice [pReview]=product.pReview>
+        </app-card>
+    </div>
+</div>
