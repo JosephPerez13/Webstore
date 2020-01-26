@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NgbSlideEvent, NgbSlideEventSource } from '@ng-bootstrap/ng-bootstrap';
-import { IShuriken } from 'src/app/shared/interfaces/i-shuriken';
+
 
 @Component({
   selector: 'app-main',

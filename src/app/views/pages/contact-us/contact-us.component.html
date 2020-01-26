@@ -1,3 +1,7 @@
-<app-contact-card class="col-4" *ngFor="let image of images" [photo]=image.photo [name]=image.name
-    [number]=image.number>
-</app-contact-card>
+<div class="container-fluid">
+    <div class="row">
+        <app-contact-card class="col-4" *ngFor="let image of images" [photo]=image.photo [name]=image.name
+            [number]=image.number>
+        </app-contact-card>
+    </div>
+</div>

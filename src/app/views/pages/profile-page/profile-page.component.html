@@ -1,0 +1,6 @@
+<div class="container-fluid">
+    <div class="row">
+        <app-profile-card class="col" *ngFor="let profile of profiles" [photo]=profile.photo [name]=profile.name
+            [number]=profile.number></app-profile-card>
+    </div>
+</div>

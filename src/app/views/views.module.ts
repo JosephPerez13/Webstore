@@ -3,12 +3,12 @@ import { CommonModule } from '@angular/common';
 import { SharedModule } from '../shared/shared.module';
 import { ContactUsComponent } from './pages/contact-us/contact-us.component';
 import { FooterComponent } from './pages/footer/footer.component';
-import { HeaderComponent } from './pages/header/header.component';
 import { ItemsComponent } from './pages/items/items.component';
 import { MainComponent } from './pages/main/main.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { ContentComponent } from './pages/content/content.component';
 import { RouterModule } from '@angular/router';
+import { ProfilePageComponent } from './pages/profile-page/profile-page.component';
+import { Header1Component } from './pages/header1/header1.component';
 
 
 
@@ -16,10 +16,10 @@ import { RouterModule } from '@angular/router';
   declarations: [
     ContactUsComponent,
     FooterComponent,
-    HeaderComponent,
     ItemsComponent,
     MainComponent,
-    ContentComponent
+    ProfilePageComponent,
+    Header1Component
   ],
   imports: [
     CommonModule,
@@ -30,10 +30,10 @@ import { RouterModule } from '@angular/router';
   exports: [
     ContactUsComponent,
     FooterComponent,
-    HeaderComponent,
     ItemsComponent,
     MainComponent,
-    ContentComponent
+    Header1Component,
+    ProfilePageComponent
   ]
 })
 export class ViewsModule { }

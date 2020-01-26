@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModal, ModalDismissReasons, NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-login-modal',
   templateUrl: './login-modal.component.html',
-  styleUrls: ['./login-modal.component.scss']
+  styleUrls: ['./login-modal.component.scss'],
 })
+
 export class LoginModalComponent implements OnInit {
   closeResult: string;
   constructor(private modalService: NgbModal) { }
@@ -21,6 +22,9 @@ export class LoginModalComponent implements OnInit {
     });
   }
 
+  open1() {
+    this.modalService.open(LoginModalComponent);
+  }
 
   private getDismissReason(reason: any): string {
     if (reason === ModalDismissReasons.ESC) {
@@ -33,3 +37,24 @@ export class LoginModalComponent implements OnInit {
   }
 
 }
+
+// export class NgbdModalStacked {
+//   constructor(private modalService: NgbModal) { }
+
+//   open() {
+//     this.modalService.open(LoginModalComponent);
+//   }
+// }
+
+// export class NgbdModal1Content {
+//   constructor(private modalService: NgbModal, public activeModal: NgbActiveModal) { }
+
+//   open() {
+//     this.modalService.open(NgbdModal2Content, {
+//       size: 'lg'
+//     });
+//   }
+// }
+// export class NgbdModal2Content {
+//   constructor(public activeModal: NgbActiveModal) { }
+// }

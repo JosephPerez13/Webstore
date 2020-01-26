@@ -18,10 +18,15 @@ export class ContactUsComponent implements OnInit {
       number: 2096578758
     },
     {
+      name: 'Joseph Perez',
+      photo: '/assets/JPHeadShot.jpg',
+      number: 2098768754
+    },
+    {
       name: 'Kakashi',
       photo: '/assets/Kakashi.jpg',
       number: 2708763524
-    }
+    },
   ]
 
 }
