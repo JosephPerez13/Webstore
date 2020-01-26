@@ -9,6 +9,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule } from '@angular/router';
 import { ProfilePageComponent } from './pages/profile-page/profile-page.component';
 import { Header1Component } from './pages/header1/header1.component';
+import { ProductComponent } from './pages/product/product.component';
 
 
 
@@ -19,7 +20,8 @@ import { Header1Component } from './pages/header1/header1.component';
     ItemsComponent,
     MainComponent,
     ProfilePageComponent,
-    Header1Component
+    Header1Component,
+    ProductComponent
   ],
   imports: [
     CommonModule,
@@ -33,7 +35,10 @@ import { Header1Component } from './pages/header1/header1.component';
     ItemsComponent,
     MainComponent,
     Header1Component,
-    ProfilePageComponent
+    ProfilePageComponent,
+    ProductComponent
   ]
 })
-export class ViewsModule { }
+export class ViewsModule {
+
+}

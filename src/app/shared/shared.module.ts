@@ -23,7 +23,10 @@ import { ProductCardComponent } from './product-card/product-card.component';
     CardComponent,
     ContactCardComponent,
     LoginModalComponent,
-    ProfileCardComponent
+    ProfileCardComponent,
+    ProductCardComponent
   ]
 })
-export class SharedModule { }
+export class SharedModule {
+
+}

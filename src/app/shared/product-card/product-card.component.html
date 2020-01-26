@@ -1,1 +1,14 @@
-<p>product-card works!</p>
+<div class="card bgGray" style="height:fit-content;">
+    <img src="{{pPic}}" class="card-img-top" alt='Picture of our products'>
+    <div class="card-body">
+        <h5 class="card-title">{{pName}}</h5>
+        <p class="card-text">{{pDescription}}</p>
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item ">${{pPrice}}</li>
+        <li class="list-group-item">{{pReview}}</li>
+        <div class="card-body">
+            <button class="btn btn-primary">Add To Cart</button>
+        </div>
+    </ul>
+</div>
