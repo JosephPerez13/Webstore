@@ -1,11 +1,11 @@
 <ng-template #content let-modal>
     <div id="head" class="modal-header">
-        <h4 class="textColor modal-title" id="modal-basic-title">Profile Login</h4>
+        <h4 class="textColor modal-title" id="modal-basic-title">Create an Account</h4>
         <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
             <span aria-hidden="true">&times;</span>
         </button>
     </div>
-    <div id="body" class="modal-body">
+    <div id="body" class="modal-body center">
         <form>
             <div class="form-group">
                 <label for="UsernamePassword" class="textColor">Login</label>
@@ -14,28 +14,37 @@
                         <div class="ui-inputgroup">
                             <span class="ui-inputgroup-addon"><i class="pi pi-user"
                                     style="line-height: 1.25"></i></span>
-                            <input style="color:#D1BE46" type="text" pInputText placeholder="Username">
+                            <input style="color:#D1BE46" type="text" pInputText placeholder="Name">
                         </div>
+                        <hr>
+                        <div class="ui-inputgroup">
+                            <span class="ui-inputgroup-addon"><i class="pi pi-user"
+                                    style="line-height: 1.25;"></i></span>
+                            <input style="color:#D1BE46" type="text" pInputText placeholder="Email">
+                        </div>
+                        <hr>
                         <div class="ui-inputgroup">
                             <span class="ui-inputgroup-addon"><i class="pi pi-user"
                                     style="line-height: 1.25;"></i></span>
                             <input type="password" pInputText placeholder="Password">
                         </div>
-                    </div>
-                    <div class="input-group-append">
-                        <button class=" textColor btn btn-outline-secondary" (click)="dp.toggle()"
-                            type="button">Login</button>
+                        <hr>
+                        <div class="ui-inputgroup">
+                            <span class="ui-inputgroup-addon"><i class="pi pi-user"
+                                    style="line-height: 1.25;"></i></span>
+                            <input type="password" pInputText placeholder="Confirm Password">
+                        </div>
                     </div>
                 </div>
             </div>
         </form>
     </div>
     <div id="footer" class="modal-footer">
-        <div class="col d-flex justify-content-center px-0 textColor">
-            <app-registration></app-registration>
+        <div class="col d-flex justify-content-center px-0">
+            <button class="textColor btn btn-lg btn-outline-primary" (click)="open1()">Create Account</button>
         </div>
         <!--
         <button type="submit" class="btn btn-outline-dark col-6" (click)="modal.close('Save click')">Save</button> -->
     </div>
 </ng-template>
-<button type="button" class="btn btn-lg btn-primary" (click)="open(content)">Login</button>
+<button type="button" class="btn btn-lg btn-primary" (click)="open(content)">Create an Account</button>

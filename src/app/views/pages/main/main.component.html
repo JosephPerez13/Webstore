@@ -1,26 +1,3 @@
-<ngb-carousel *ngIf="images">
-    <ng-template ngbSlide>
-        <div class="picsum-img-wrapper">
-            <img [src]="images[0]" alt="Random first slide" height="590vh">
-        </div>
-        <div class="carousel-caption">
-            <h3>First slide label</h3>
-        </div>
-    </ng-template>
-    <ng-template ngbSlide>
-        <div class="picsum-img-wrapper">
-            <img [src]="images[1]" alt="Random second slide" height="590vh">
-        </div>
-        <div class="carousel-caption">
-            <h3>Second slide label</h3>
-        </div>
-    </ng-template>
-    <ng-template ngbSlide>
-        <div class="picsum-img-wrapper">
-            <img [src]="images[2]" alt="Random third slide" height="590vh">
-        </div>
-        <div class="carousel-caption">
-            <h3>Third slide label</h3>
-        </div>
-    </ng-template>
-</ngb-carousel>
+<div class="d-flex justify-content-center bgTeal" height="100%">
+    <router-outlet></router-outlet>
+</div>

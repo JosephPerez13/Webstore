@@ -10,6 +10,7 @@ import { RouterModule } from '@angular/router';
 import { ProfilePageComponent } from './pages/profile-page/profile-page.component';
 import { Header1Component } from './pages/header1/header1.component';
 import { ProductComponent } from './pages/product/product.component';
+import { Home1Component } from './pages/home1/home1.component';
 
 
 
@@ -21,7 +22,8 @@ import { ProductComponent } from './pages/product/product.component';
     MainComponent,
     ProfilePageComponent,
     Header1Component,
-    ProductComponent
+    ProductComponent,
+    Home1Component,
   ],
   imports: [
     CommonModule,
@@ -36,7 +38,8 @@ import { ProductComponent } from './pages/product/product.component';
     MainComponent,
     Header1Component,
     ProfilePageComponent,
-    ProductComponent
+    ProductComponent,
+    Home1Component
   ]
 })
 export class ViewsModule {

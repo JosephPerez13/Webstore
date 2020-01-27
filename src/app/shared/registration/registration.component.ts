@@ -2,12 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
-  selector: 'app-login-modal',
-  templateUrl: './login-modal.component.html',
-  styleUrls: ['./login-modal.component.scss'],
+  selector: 'app-registration',
+  templateUrl: './registration.component.html',
+  styleUrls: ['./registration.component.scss']
 })
-
-export class LoginModalComponent implements OnInit {
+export class RegistrationComponent implements OnInit {
   closeResult: string;
   constructor(private modalService: NgbModal) { }
 
@@ -31,5 +30,6 @@ export class LoginModalComponent implements OnInit {
       return `with: ${reason}`;
     }
   }
+
 
 }
