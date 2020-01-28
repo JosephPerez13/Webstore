@@ -11,6 +11,7 @@ import { ProfilePageComponent } from './pages/profile-page/profile-page.componen
 import { Header1Component } from './pages/header1/header1.component';
 import { ProductComponent } from './pages/product/product.component';
 import { Home1Component } from './pages/home1/home1.component';
+import { CartComponent } from './pages/cart/cart.component';
 
 
 
@@ -24,6 +25,7 @@ import { Home1Component } from './pages/home1/home1.component';
     Header1Component,
     ProductComponent,
     Home1Component,
+    CartComponent,
   ],
   imports: [
     CommonModule,

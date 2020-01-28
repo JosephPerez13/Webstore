@@ -4,7 +4,10 @@
             <!-- <app-card class="col-4" *ngFor="let product of products" [pPic]=product.pPic [pName]=product.pName
             [pDescription]=product.pDescription [pPrice]=product.pPrice [pReview]=product.pReview>
         </app-card> -->
-            <app-card [data]="product" ></app-card>
+            <app-card [data]="product"></app-card>
+            <button routerLink="product/:id" routerLinkActive="true"
+                class="btn btn-primary d-flex justify-content-space-around">Look at
+                Item</button>
         </div>
     </div>
 </div>

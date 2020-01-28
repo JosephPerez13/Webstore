@@ -8,11 +8,8 @@
         <li class="list-group-item ">${{data.pPrice}}</li>
         <li class="list-group-item ">{{data.pReview}} Stars</li>
     </ul>
-    <div class="card-body">
-        <!-- <button class="btn btn-primary d-flex justify-content-space-around" (click)="addToCart()">Add To Cart</button> -->
-        <hr>
-        <button routerLink="/profile-page" routerLinkActive="true"
-            class="btn btn-primary d-flex justify-content-space-around">Look at
-            Item</button>
-    </div>
+    <!-- <button class="btn btn-primary d-flex justify-content-space-around" (click)="addToCart()">Add To Cart</button> -->
+    <hr>
+    <button routerLink=":product/:id" routerLinkActive="true"
+        class="btn btn-primary d-flex justify-content-space-around">Add To Cart</button>
 </div>

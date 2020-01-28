@@ -1,7 +1,14 @@
 <p>product works!</p>
-<app-product-card class="col-4" *ngFor="let product of products" [pPic]=product.pPic [pName]=product.pName
+<!-- <app-product-card class="col-4" *ngFor="let product of products" [pPic]=product.pPic [pName]=product.pName
     [pDescription]=product.pDescription [pPrice]=product.pPrice [pReview]=product.pReview>
-</app-product-card>
+</app-product-card> -->
+<div class="container">
+    <div class="row">
+        <div class="col" *ngFor="let product of products">
+            <app-product-card [item]="product"></app-product-card>
+        </div>
+    </div>
+</div>
 <hr>
 <div class="container">
     <div class="row">
