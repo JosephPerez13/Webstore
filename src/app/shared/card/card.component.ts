@@ -1,4 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { IProduct } from '../interfaces/i-product';
+import { DataService } from '../services/data.service';
 
 @Component({
   selector: 'app-card',
@@ -6,15 +8,12 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./card.component.scss']
 })
 export class CardComponent implements OnInit {
-  @Input() pPic: string;
-  @Input() pName: string;
-  @Input() pDescription: string;
-  @Input() pPrice: number;
-  @Input() pReview: number;
-
-  constructor() { }
+  @Input() data: IProduct;
+  // products: IProduct[]= [];
+  constructor(private dService: DataService) { }
 
   ngOnInit() {
+    // this.products = this.dService.getProducts();
   }
 
 }

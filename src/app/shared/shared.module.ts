@@ -26,7 +26,8 @@ import { RegistrationComponent } from './registration/registration.component';
     ContactCardComponent,
     LoginModalComponent,
     ProfileCardComponent,
-    ProductCardComponent
+    ProductCardComponent,
+    RegistrationComponent
   ]
 })
 export class SharedModule {
