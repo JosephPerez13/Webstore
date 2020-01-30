@@ -6,4 +6,6 @@ export interface IProduct {
     pDescription: string;
     pPrice: number;
     pReview: number;
+    link: string;
+    quantity: number;
 }

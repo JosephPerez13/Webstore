@@ -41,7 +41,8 @@ import { CartComponent } from './pages/cart/cart.component';
     Header1Component,
     ProfilePageComponent,
     ProductComponent,
-    Home1Component
+    Home1Component,
+    CartComponent
   ]
 })
 export class ViewsModule {

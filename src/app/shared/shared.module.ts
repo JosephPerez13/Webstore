@@ -6,6 +6,8 @@ import { LoginModalComponent } from './login-modal/login-modal.component';
 import { ProfileCardComponent } from './profile-card/profile-card.component';
 import { ProductCardComponent } from './product-card/product-card.component';
 import { RegistrationComponent } from './registration/registration.component';
+import { CartCardComponent } from './cart-card/cart-card.component';
+import { AppRoutingModule } from '../app-routing.module';
 
 
 
@@ -16,10 +18,12 @@ import { RegistrationComponent } from './registration/registration.component';
     LoginModalComponent,
     ProfileCardComponent,
     ProductCardComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    CartCardComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    AppRoutingModule
   ],
   exports: [
     CardComponent,
@@ -27,7 +31,8 @@ import { RegistrationComponent } from './registration/registration.component';
     LoginModalComponent,
     ProfileCardComponent,
     ProductCardComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    CartCardComponent
   ]
 })
 export class SharedModule {

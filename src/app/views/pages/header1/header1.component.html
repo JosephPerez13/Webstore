@@ -4,10 +4,38 @@
             <h2>NinjaStars4Sale</h2>
         </div>
         <!--Image of the shopping cart will go right here-->
-        <img routerLink="/cart" routerLinkActive="active" src="assets/cartImage.png" height="40vh" rel="stylesheet">
+        <img src="assets/cartImage.png" (click)="toggleList()" height="40vh" rel="stylesheet">
+        <a id="cart" (click)="toggleList()"> Cart <span class="badge badge-info">{{cartCount}}</span></a>
         <div class="cold-flex justify-content-endRight">
             <app-login-modal></app-login-modal>
         </div>
+    </div>
+</div>
+
+<div class="container" *ngIf="showList">
+    <div class="shopping-cart">
+        <div class="shopping-cart-header">
+            <i class="fa fa-shopping-cart cart-icon"></i><span class="badge badge-info">{{cartCount}}</span>
+            <div class="shopping-cart-total">
+                <span>Total:</span>
+                <span>${{cartTotal}}</span>
+            </div>
+        </div>
+        <div *ngIf="cartItems.length == 0" class="py-2">
+            No items in your cart!
+        </div>
+        <ul class="shopping-cart-items">
+            <li *ngFor="let item of cartItems; let i = index">
+                <!-- <img src="assets/test.jpg" alt="Item" /> -->
+                <span class="item-name">{{item.pName}}</span>
+                <span class="item-price">${{item.price}}</span>
+                <span class="item-quantity">Quantity:{{item.quantity}}</span>
+                <button class="btn btn-primary" (click)="addQuantity(item)">+</button>
+                <button class="btn btn-primary" (click)="subtractQuantity(item, i)">-</button>
+                <a (click)="removeItem(item, i)" class="item-remove text-danger"> Remove </a>
+            </li>
+        </ul>
+        <a href="#" class="btn btn-primary btn-block">Checkout</a>
     </div>
 </div>
 <nav class="navbar navbar-expand-lg navbar-light bgGray">

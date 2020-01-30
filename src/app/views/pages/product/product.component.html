@@ -1,11 +1,20 @@
-<p>product works!</p>
-<!-- <app-product-card class="col-4" *ngFor="let product of products" [pPic]=product.pPic [pName]=product.pName
-    [pDescription]=product.pDescription [pPrice]=product.pPrice [pReview]=product.pReview>
-</app-product-card> -->
 <div class="container">
     <div class="row">
-        <div class="col" *ngFor="let product of products">
-            <app-product-card [item]="product"></app-product-card>
+        <div class="col">
+            <div class="card bgGray" style="height:fit-content;">
+                <img src="{{productDesc.pPic}}" class="card-img-top" alt='Picture of our products'>
+                <div class="card-body">
+                    <h5 class="card-title">{{productDesc.pName}}</h5>
+                    <p class="card-text">{{productDesc.pDescription}}</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item ">${{productDesc.pPrice}}</li>
+                    <li class="list-group-item">{{productDesc.pReview}}</li>
+                    <div class="card-body">
+                        <button class="btn btn-primary">Add To Cart</button>
+                    </div>
+                </ul>
+            </div>
         </div>
     </div>
 </div>

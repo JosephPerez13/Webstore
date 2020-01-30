@@ -10,6 +10,8 @@
     </ul>
     <!-- <button class="btn btn-primary d-flex justify-content-space-around" (click)="addToCart()">Add To Cart</button> -->
     <hr>
-    <button routerLink=":product/:id" routerLinkActive="true"
-        class="btn btn-primary d-flex justify-content-space-around">Add To Cart</button>
+    <a routerLink="/{{data.link}}/{{data.id}}" class="btn btn-primary d-flex justify-content-space-around">Look at
+        Item</a>
+    <button (click)="addToCart(data)" class="btn btn-primary">+</button>
+
 </div>

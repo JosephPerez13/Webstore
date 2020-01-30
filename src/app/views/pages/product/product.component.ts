@@ -9,30 +9,22 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./product.component.scss']
 })
 export class ProductComponent implements OnInit {
-  // products = [
-  //   {
-  //     pPic: '/assets/FourNinjaStars1.jpg',
-  //     pName: 'Ninja Stars',
-  //     pDescription: 'This a product for Ninjas of the highest tier',
-  //     pPrice: 20.00,
-  //     pReview: 4.5
-  //   },
-  // ]
-  products: IProduct;
+  productDesc: IProduct;
   constructor(private dService: DataService, private route: ActivatedRoute) { }
 
   ngOnInit() {
     //we are going to grab the ID nunmber
-    const id = this.route.snapshot.paramMap.get('id');
-    this.getProducts(id);
+    this.getProduct();
   }
 
-  getProducts(sku: string) {
-    // Find this Information Via Service
-    console.log(sku)
-    this.dService.getItem(sku).subscribe(
-      x => this.products = x
-    );
+
+  getProduct() {
+    const id = this.route.snapshot.paramMap.get('id');
+    const productName = this.route.snapshot.paramMap.get('productName');
+
+    this.dService.getProduct(id).subscribe(
+      item => this.productDesc = item
+    )
   }
 
 }

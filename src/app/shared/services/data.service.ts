@@ -13,7 +13,9 @@ export class DataService {
       pName: 'Ninja Stars',
       pDescription: 'This a product for Ninjas of the highest tier',
       pPrice: 20.00,
-      pReview: 4.5
+      pReview: 4.5,
+      link: 'fourNinjaStars',
+      quantity: 0
     },
     {
       id: '1',
@@ -22,7 +24,9 @@ export class DataService {
       pName: 'Paper Ninja Stars',
       pDescription: 'This a product for Ninjas of the highest tier',
       pPrice: 10.00,
-      pReview: 4.0
+      pReview: 4.0,
+      link: 'paperNinjaStars',
+      quantity: 0
     },
     {
       id: '2',
@@ -31,7 +35,9 @@ export class DataService {
       pName: 'Manga Star',
       pDescription: 'The star used for the different Mangas',
       pPrice: 35.00,
-      pReview: 4.5
+      pReview: 4.5,
+      link: 'mangaStars',
+      quantity: 0
     }
   ]
   constructor() { }
@@ -40,10 +46,22 @@ export class DataService {
     return this.products;
   }
 
+  addToCart(cartItem: IProduct) {
+    this.products.push(cartItem);
+    console.log(this.products);
+  }
+
   getItem(id: string): Observable<IProduct> {
     return of(this.products.find(
       z => z.id === id
     ));
+  }
+
+  getProduct(sku: string): Observable<IProduct> {
+    return of(
+      this.products.find(
+        somethingElse => somethingElse.id === sku
+      ));
   }
 }
 
